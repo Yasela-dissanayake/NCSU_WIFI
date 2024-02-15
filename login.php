@@ -73,7 +73,7 @@ if(isset($_GET['code'])){
                     <!-- Google Sign-In button with Google icon -->
                     <a href="<?php echo $client->createAuthUrl() ?>" class="btn btn-outline-dark btn-block fa-lg gradient-custom-2 mb-2">
                       <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo" height="33" class="mr-3">
-                      Log in with Google
+                      Log in with Google Rasanjana
                     </a>
                   </div>
                 </form>
