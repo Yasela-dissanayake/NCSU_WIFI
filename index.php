@@ -1,5 +1,6 @@
 <?php require_once('./configurations/auth.php') ?>
-<?php include('./constants/header.php')?>
+<?php require_once('./constants/header.php')?>
+
 <?php 
 if(isset($_GET['logout'])){
     session_destroy();

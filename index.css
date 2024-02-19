@@ -1,9 +1,8 @@
 
-    
   /* Override Bootstrap button hover effect */
   .btn-outline-dark:hover {
     background-color: transparent;
-    color: #000000; /* Change this color to match your desired text color */
+    color:red; /* Change this color to match your desired text color */
     border-color: #0c0c0c; /* Change this color to match your desired border color */
   }
  

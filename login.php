@@ -2,7 +2,6 @@
 
 <?php require_once('./configurations/auth.php'); ?>
 
-
 <?php
 require_once './vendor/autoload.php';
 
@@ -49,21 +48,23 @@ if(isset($_GET['code'])){
 
 ?>
 
-<section class="h-100vh gradient-form" style="background-color: #eee;">
-  <div class="container py-5 h-100vh">
-    <div class="row d-flex justify-content-center align-items-center h-100vh">
-      <div class="col-xl-10">
-        <div class="card rounded-3 text-black">
-          <div class="row g-0">
-            <div class="col-lg-6">
-              <div class="card-body p-md-5 mx-md-1">
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/57c0ce6296.js" crossorigin="anonymous"></script>
+
+<section class="h-100vh gradient-form" style="background-color: #eee; display:flex; align-items:center; heigth:100vh">
+  <div class="container py-5 h-100vh ">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-xl-10 text-center">
+        <div class="card shadow rounded-3 text-black"  style="width:75%; margin:auto">
+          <!-- <div class="row g-0"> -->
+          <div class="card-body p-md-5 mx-md-1">
                 <div class="text-center">
-                  <i class="fa fa-wifi" style="font-size:60px"></i>
-                  <h4 class="mt-1 mb-6 pb-1">Welcome To Student Registration Portallll</h4>
+                  <i class="fa fa-wifi" style="font-size:60px "></i>
+                  <h4 class="mt-1 mb-6 pb-1" style="padding-top:20px">Welcome To Student Registration Portal</h4>
                 </div>
 
                 <form>
-                  <p>Unlock the power of seamless connectivity with our cutting-edge WiFi Access Registration Portal.</p>
+                  <p style="text-align:center">Unlock the power of seamless connectivity with our cutting-edge WiFi Access Registration Portal.</p>
 
                   <p class="text-center font-weight-bold">
                     Click here to continue with your G-Suite Account (pdn.ac.lk)
@@ -71,17 +72,13 @@ if(isset($_GET['code'])){
 
                   <div class="text-center pt-1 mb-5 pb-1">
                     <!-- Google Sign-In button with Google icon -->
-                    <a href="<?php echo $client->createAuthUrl() ?>" class="btn btn-outline-dark btn-block fa-lg gradient-custom-2 mb-2">
-                      <img src="https://developers.google.com/identity/images/g-logo.png" alt="Google Logo" height="33" class="mr-3">
-                      Log in with Google Rasanjana
+                    <a href="<?php echo $client->createAuthUrl() ?>" class="btn btn-outline-primary w-50 login-button"  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: 1rem; --bs-btn-font-size: 1.5rem;">
+                    <i class="fa-brands fa-google" style="color: #25a253;"></i>
+                      Log in 
                     </a>
                   </div>
                 </form>
               </div>
-            </div>
-            <div class="col-lg-6 d-flex align-items-center gradient-custom-2">
-              <img src="./utility/img/landingPage/LandingImage.jpg" style="width: 450px;" alt="landing vector">
-            </div>
           </div>
         </div>
       </div>
