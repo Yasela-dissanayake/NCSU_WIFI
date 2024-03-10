@@ -11,6 +11,7 @@ $clientSecret = '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';
 $redirectUri = 'http://localhost/NCSU-WiFi/login.php';
 
 // create Client Request to access Google API
+
 $client = new Google_Client();
 $client->setClientId($clientID);
 $client->setClientSecret($clientSecret);
@@ -48,19 +49,45 @@ if(isset($_GET['code'])){
 
 ?>
 
+<?php
+// Function to detect if the user is using a mobile device
+function isMobileDevice() {
+    return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER['HTTP_USER_AGENT']);
+}
+
+// Use the function to determine device type
+$isMobile = isMobileDevice();
+?>
+
 <!-- Font Awesome -->
 <script src="https://kit.fontawesome.com/57c0ce6296.js" crossorigin="anonymous"></script>
 
-<section class="h-100vh gradient-form" style="background-color: #eee; display:flex; align-items:center; heigth:100vh">
+ <!-- google fonts -->
+ <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/style.css">
+<meta name = "veiwpoint" content = "width=device-width , initial-scale=1.0">
+
+<style>
+        /* Media query for smaller screens (e.g., mobile devices) */
+        @media only screen and (max-width: 768px) {
+            .card {
+                width: 80%; /* Adjusted width for smaller screens */
+            }
+        }
+    </style>
+
+
+<section class="h-100vh gradient-form" style="background-color: #eee; display:flex; align-items:center; heigth:100vh; line-height: 1.5; border-style: inset;">
   <div class="container py-5 h-100vh ">
     <div class="row d-flex justify-content-center align-items-center">
-      <div class="col-xl-10 text-center">
-        <div class="card shadow rounded-3 text-black"  style="width:75%; margin:auto">
+      <div class="col-xl-4 col-sm-2 text-center">
+        <div class="card shadow rounded-3 text-black "  style=" margin:auto;">
           <!-- <div class="row g-0"> -->
           <div class="card-body p-md-5 mx-md-1">
                 <div class="text-center">
                   <i class="fa fa-wifi" style="font-size:60px "></i>
-                  <h4 class="mt-1 mb-6 pb-1" style="padding-top:20px">Welcome To Student Registration Portal</h4>
+                  <h3 class="mt-1 mb-6 pb-1" style="padding-top:20px;  font-family: Montserrat-bold; font-weight: bold; margin-bottom: 1rem;">Welcome To Student Registration Portal</h3>
                 </div>
 
                 <form>
@@ -72,7 +99,7 @@ if(isset($_GET['code'])){
 
                   <div class="text-center pt-1 mb-5 pb-1">
                     <!-- Google Sign-In button with Google icon -->
-                    <a href="<?php echo $client->createAuthUrl() ?>" class="btn btn-outline-primary w-50 login-button"  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: 1rem; --bs-btn-font-size: 1.5rem;">
+                    <a href="<?php echo $client->createAuthUrl() ?>" class="btn btn-outline-primary btn-lg login-button"  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: 1rem; --bs-btn-font-size: 1.5rem;">
                     <i class="fa-brands fa-google" style="color: #25a253;"></i>
                       Log in 
                     </a>
