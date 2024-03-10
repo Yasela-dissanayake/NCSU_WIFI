@@ -100,7 +100,7 @@ $isMobile = isMobileDevice();
                   <div class="text-center pt-1 mb-5 pb-1">
                     <!-- Google Sign-In button with Google icon -->
                     <a href="<?php echo $client->createAuthUrl() ?>" class="btn btn-outline-primary btn-lg login-button"  style="--bs-btn-padding-y: .25rem; --bs-btn-padding-x: 1rem; --bs-btn-font-size: 1.5rem;">
-                    <i class="fa-brands fa-google" style="color: #25a253;"></i>
+                    <img src="./images/google.png" alt="google-logo" style = "width: 20px; height: 20px; margin-bottom:3px">
                       Log in 
                     </a>
                   </div>
