@@ -68,16 +68,6 @@ $isMobile = isMobileDevice();
 <link rel="stylesheet" href="/style.css">
 <meta name = "veiwpoint" content = "width=device-width , initial-scale=1.0">
 
-<style>
-        /* Media query for smaller screens (e.g., mobile devices) */
-        @media only screen and (max-width: 768px) {
-            .card {
-                width: 80%; /* Adjusted width for smaller screens */
-            }
-        }
-    </style>
-
-
 <section class="h-100vh gradient-form" style="background-color: #eee; display:flex; align-items:center; heigth:100vh; line-height: 1.5; border-style: inset;">
   <div class="container py-5 h-100vh ">
     <div class="row d-flex justify-content-center align-items-center">
